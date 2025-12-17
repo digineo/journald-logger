@@ -1,5 +1,8 @@
 # journald-logger
 
+[![CI](https://github.com/theforeman/journald-logger/actions/workflows/ruby.yml/badge.svg)](https://github.com/theforeman/journald-logger/actions/workflows/ruby.yml)
+[![RuboCop](https://github.com/theforeman/journald-logger/actions/workflows/rubocop.yml/badge.svg)](https://github.com/theforeman/journald-logger/actions/workflows/rubocop.yml)
+
 A Logger drop-in replacement that logs directly to systemd-journal with some additional features
 
 ## Usage
@@ -96,7 +99,7 @@ begin
 rescue => e
   logger.exception e # log exception with LOG_ERR level by default
   logger.exception e, severity: Logger::WARN        # use Logger severity
-  logger.exception e, priority: Journald::LOG_ALERT # use Syslog priority 
+  logger.exception e, priority: Journald::LOG_ALERT # use Syslog priority
 end
 ```
 

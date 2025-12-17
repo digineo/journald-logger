@@ -1,22 +1,6 @@
 AllCops:
-  Exclude:
-    - "spec/**/*"
-    - "vendor/**/*"
-  TargetRubyVersion: 2.5
-  SuggestExtensions: false
+  TargetRubyVersion: 3.2
   NewCops: enable
 
-Layout:
-  Enabled: false
-
-Metrics:
-  Enabled: false
-
-Style:
-  Enabled: false
-
-Naming:
-  Enabled: false
-
-Lint/EndAlignment:
-  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
